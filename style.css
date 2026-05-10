@@ -1,0 +1,276 @@
+/* ======================================================= */
+/* বেসিক রিসেট এবং ফন্ট (Base Reset & Fonts) */
+/* ======================================================= */
+:root {
+    --primary-color: #007BFF; /* নীল রং */
+    --secondary-color: #28a745; /* সবুজ রং */
+    --dark-color: #2c3e50;
+    --light-color: #f4f4f9;
+    --text-color: #333;
+    --shadow-sm: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+    scroll-behavior: smooth; /* স্মুথ স্ক্রলিংয়ের জন্য */
+}
+
+/* ======================================================= */
+/* ১. Navbar Styling (নাব বার) */
+/* ======================================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    position: relative;
+}
+
+/* অ্যানিমেশন: হোভার এফেক্ট */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+
+/* ======================================================= */
+/* কমন স্টাইল (Common Styles) */
+/* ======================================================= */
+.section-padding {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.bg-light {
+    background-color: var(--light-color);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--dark-color);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    margin: 10px auto 0;
+}
+
+/* বাটন স্টাইল */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 10px 10px 10px 0;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease; /* ট্রানজিশন অ্যানিমেশন */
+    font-weight: 600;
+    border: none;
+}
+.primary-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+.primary-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px); /* সামান্য উপরে উঠা */
+    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
+}
+.secondary-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+.secondary-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* ======================================================= */
+/* হিরো সেকশন (Hero Section) */
+/* ======================================================= */
+.hero-section {
+    background: linear-gradient(135deg, #e0f7fa, #e0e0e0);
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 5%;
+}
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+.highlight {
+    color: var(--primary-color);
+}
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+.hero-buttons {
+    margin-top: 20px;
+}
+
+/* ======================================================= */
+/* ২. About Section Styling */
+/* ======================================================= */
+.about-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    text-align: left;
+}
+.about-text {
+    flex: 2;
+}
+.about-image {
+    flex: 1;
+}
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease-in-out;
+}
+.about-image img:hover {
+    transform: scale(1.03); /* হোভার অ্যানিমেশন */
+}
+
+
+/* ======================================================= */
+/* ৩. Skills Section Styling */
+/* ======================================================= */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.skill-card {
+    background: #fff;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+/* অ্যানিমেশন: হোভার এফেক্ট */
+.skill-card:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.2);
+}
+
+/* ======================================== */
+/* CONTACT/FORM STYLING (Optional) */
+/* ======================================== */
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+/* ======================================== */
+/* ANIMATION UTILITIES (For JavaScript) */
+/* ======================================== */
+
+/* Class applied when the element becomes visible */
+.fade-in {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+/* Initial state for elements to be animated */
+.fade-fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}

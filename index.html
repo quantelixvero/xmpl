@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>আমার পোর্টফোলিও | Your Name</title>
+    <!-- CSS ফাইল লিঙ্ক করা -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts (Stylish font ব্যবহার করা) -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ১. নেভিগেশন বার (Navbar) -->
+    <nav class="navbar">
+        <div class="brand">YourName.dev</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="cta-button">Hire Me</button>
+    </nav>
+
+    <!-- ১. হিরো সেকশন (Hero Section) - প্রথম যা দেখা যাবে -->
+    <header class="hero-section">
+        <div class="hero-content animate-on-load">
+            <h1>Hi, I'm <span class="highlight">Your Name</span></h1>
+            <p class="subtitle">A passion-driven Web Developer creating beautiful and functional experiences.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary-btn">View Projects</a>
+                <a href="#contact" class="btn secondary-btn">Contact Me</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ২. About Section -->
+        <section id="about" class="section-padding">
+            <h2 class="section-title animate-reveal">About Me</h2>
+            <div class="about-container animate-reveal">
+                <div class="about-text">
+                    <p>আমি একজন একজন ফুল-স্ট্যাক ডেভেলপার। আমার মূল আগ্রহ হলো ব্যবহারকারী-বান্ধব এবং পারফরম্যান্ট ওয়েবসাইট তৈরি করা। আমি অত্যাধুনিক প্রযুক্তি যেমন React, Node.js, এবং CSS অ্যানিমেশন নিয়ে কাজ করতে ভালোবাসি।</p>
+                    <p>আমার লক্ষ্য হলো কোডের মাধ্যমে জটিল আইডিয়াগুলিকে সহজ এবং সুন্দর রূপে তুলে ধরা।</p>
+                    <a href="#contact" class="btn primary-btn view-resume">Download CV</a>
+                </div>
+                <div class="about-image animate-reveal">
+                    <!-- এখানে নিজের ছবি দিন -->
+                    <img src="profile.jpg" alt="Your Profile Picture">
+                </div>
+            </div>
+        </section>
+
+        <!-- ৩. Skills Section -->
+        <section id="skills" class="section-padding bg-light">
+            <h2 class="section-title animate-reveal">My Skills</h2>
+            <div class="skills-container animate-reveal">
+                <!-- দক্ষতা কার্ডগুলো অ্যানিমেটেড থাকবে -->
+                <div class="skill-card">HTML5 & CSS3</div>
+                <div class="skill-card">JavaScript (ES6+)</div>
+                <div class="skill-card">React.js / Vue</div>
+                <div class="skill-card">Node.js / Python</div>
+                <div class="skill-card">Tailwind CSS / Bootstrap</div>
+                <div class="skill-card">Database (SQL/MongoDB)</div>
+            </div>
+        </section>
+
+        <!-- ৪. Projects Section -->
+        <section id="projects" class="section-padding">
+            <h2 class="section-title animate-reveal">My Projects</h2>
+            <div class="projects-container animate-reveal">
+                <!-- প্রজেক্ট কার্ড ১ -->
+                <div class="project-card">
+                    <h3>E-Commerce Platform</h3>
+                    <p>একটি সম্পূর্ণ ফিচারযুক্ত ই-কমার্স সাইট যা Stripe এবং MongoDB ব্যবহার করে তৈরি করা হয়েছে।</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="#" target="_blank">Code</a>
+                    </div>
+                </div>
+                <!-- প্রজেক্ট কার্ড ২ -->
+                <div class="project-card">
+                    <h3>Weather Dashboard</h3>
+                    <p>OpenWeatherMap API ব্যবহার করে রিয়েল-টাইম আবহাওয়ার তথ্য দেখানোর একটি SPA।</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="#" target="_blank">Code</a>
+                    </div>
+                </div>
+                <!-- প্রজেক্ট কার্ড ৩ -->
+                <div class="project-card">
+                    <h3>Task Manager App</h3>
+                    <p>React Hook এবং Local Storage ব্যবহার করে দ্রুত টাস্ক ম্যানেজমেন্ট অ্যাপ।</p>
+                    <div class="project-links">
+                        <a href="#" target="_blank">Live Demo</a>
+                        <a href="#" target="_blank">Code</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ৫. Contact Section -->
+        <section id="contact" class="section-padding bg-light">
+            <h2 class="section-title animate-reveal">Get in Touch</h2>
+            <div class="contact-container animate-reveal">
+                <p class="contact-text">আপনি কি কোনো প্রজেক্টে কাজ করতে চান? আমাকে যোগাযোগ করতে দ্বিধা করবেন না।</p>
+                <form class="contact-form">
+                    <input type="text" placeholder="আপনার নাম লিখুন" required>
+                    <input type="email" placeholder="আপনার ইমেইল দিন" required>
+                    <textarea placeholder="আপনার মেসেজ লিখুন"></textarea>
+                    <button type="submit" class="btn primary-btn">Send Message</button>
+                </form>
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+                    <a href="mailto:your@email.com">Email</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- জাভাস্ক্রিপ্ট ফাইল লিঙ্ক করা -->
+    <script src="script.js"></script>
+</body>
+</html>
